@@ -2,19 +2,22 @@
     var myConnector = tableau.makeConnector();
 
     myConnector.getSchema = function(schemaCallback) {
-
+        tableau.log("Hello WDC!");
     };
+
+
 
     myConnector.getData = function(table, doneCallback) {
 
     };
 
     tableau.registerConnector(myConnector);
-    
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "USGS Earthquake Feed";
+            tableau.connectionName = "Coveo Usage Analytics";
             tableau.submit();
         });
     });
+
+
 })();
